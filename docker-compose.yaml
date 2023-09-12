@@ -1,0 +1,19 @@
+services:
+  api:
+    entrypoint: ["python", "main.py"]
+    build: .
+    depends_on:
+    - database
+    restart: always
+    env_file:
+      - .env
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/code
+  database:
+    image: mysql
+    env_file:
+      - .env
+    ports:
+      - "3306:3306"

@@ -1,0 +1,17 @@
+# Data validation/serialization
+pydantic
+
+# ORM
+sqlalchemy
+sqlalchemy-utils
+mysqlclient
+
+# http
+fastapi
+uvicorn[standard]
+pydantic-settings
+requests
+
+# testing
+pytest
+httpx
